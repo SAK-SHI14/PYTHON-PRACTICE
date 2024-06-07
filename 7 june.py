@@ -43,5 +43,51 @@ class Person:
     def get_name(self):
         return self.__name
 
-person = Person("sakshi", 30)
-print(person.get_name())  # John
+person = Person("sakshi", 18)
+print(person.get_name())  
+
+#__str__ method in OOPS
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def __str__(self):
+        return f"{self.name} is {self.age} years old"
+
+p = Person("sakshi", 18)
+print(p)  
+
+#__new__ method in OOPS 
+class MyClass:
+    def __new__(cls, *args, **kwargs):
+        print("Creating a new instance of MyClass")
+        return super().__new__(cls)
+
+    def __init__(self, name):
+        print("Initializing the instance")
+        self.name = name
+
+obj = MyClass("sakshi")
+
+#Constructor (__init__ method)
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+p = Person("sakshi", 18)
+print(p.name)  
+print(p.age)  
+
+#Destructor (__del__ method)
+class FileHandler:
+    def __init__(self, filename):
+        self.filename = filename
+        self.file = open(filename, "r")  # Change "s" to "r"
+
+    def __del__(self):
+        self.file.close()
+
+fh = FileHandler("example.txt")
+del fh
