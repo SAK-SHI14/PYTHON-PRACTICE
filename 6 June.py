@@ -28,3 +28,5 @@ for animal in Animals:
           print (count)
           count +=1    
 
+x= lambda a, b : a*b
+print(x(10, 40))
