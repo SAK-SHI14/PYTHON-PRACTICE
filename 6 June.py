@@ -30,3 +30,16 @@ for animal in Animals:
 
 x= lambda a, b : a*b
 print(x(10, 40))
+
+#simple addition 
+add_five = lambda x: x + 5
+print(add_five(10))  
+
+#string formatting
+format_string = lambda name, age: f"Hello, my name is {name} and I am {age} years old."
+print(format_string("SAKSHI", 18))
+
+#Sorting a List based on Length
+words = ["apple", "banana", "cherry", "date", "elderberry"]
+sorted_words = sorted(words, key=lambda x: len(x))
+print(sorted_words) 
