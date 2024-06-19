@@ -194,7 +194,7 @@ class Person:
         print("Age cannot be negative.")
 
 # Creating an instance of the Person class
-person = Person("sakshi", 18)
+person = Person("sakshi", 18 )
 
 # Calling the getter methods
 print("Name:", person.get_name())

@@ -3,7 +3,7 @@ import tkinter as tk
 
 def get_text():
     text = textbox.get("1.0", "end-1c")
-    print(text)  # store the text in a variable
+    print(text)   
 
 root = tk.Tk()
 root.title("Textbox Example")

@@ -1,0 +1,51 @@
+STRING FUNCTIONS:
+
+Q1. What is the purpose of the CONCAT() function in SQL? Give an example of how to use it?
+ans) CONCAT(): The CONCAT() function is used to concatenate (combine) two or more string values. Example: SELECT CONCAT('Hello', ' ', 'World'); will output "Hello World.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q2. Explain the difference between LCASE() and LOWER() functions. Which one would you prefer to use and why?
+ans) LCASE() vs LOWER(): Both LCASE() and LOWER() convert a string to lowercase letters. LOWER() is the standard SQL function, while LCASE() is a MySQL-specific alias. It's generally recommended to use LOWER() for better portability across different databases.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q3. How would you extract a substring from the 5th position to the 10th position (inclusive) from the string "Hello, World!"?
+ans) SUBSTR(): To extract a substring from the 5th position to the 10th position (inclusive) from "Hello, World!", you can use the SUBSTR() function: SELECT SUBSTR('Hello, World!', 5, 6); This will output "o, Wor".
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q4. What is the purpose of the LPAD() and RPAD() functions? Provide an example of how to use them?
+ans) LPAD() and RPAD(): The LPAD() function pads a string with a specified string on the left side to make it a certain length. RPAD() does the same but on the right side. Example: SELECT LPAD('Hello', 10, '*'); will output "*****Hello".
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q5. Write a SQL query to trim both leading and trailing spaces from the string ' Hello, World! '.?
+ans) TRIM(): To trim both leading and trailing spaces from ' Hello, World! ', you can use the TRIM() function: SELECT TRIM(' Hello, World! '); This will output "Hello, World!".
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DATE AND TIME FUNCTIONS:
+Q1. CURRENT_DATE() vs SYSDATE(): CURRENT_DATE() returns the current date, while SYSDATE() returns the current date and time.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q2. How would you calculate the number of days between two dates, say '2023-06-15' and '2023-07-20'?
+ans) To calculate the number of days between '2023-06-15' and '2023-07-20', you can use the DATEDIFF() function: SELECT DATEDIFF('2023-07-20', '2023-06-15'); This will output 35.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q3. Explain the purpose of the LAST_DAY() function with an example?
+ans) The LAST_DAY() function returns the last day of the month for a given date. Example: SELECT LAST_DAY('2023-05-01'); will output "2023-05-31".
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q4. Write a SQL query to add 3 months to the current date?
+ans) To add 3 months to the current date, you can use the ADDDATE() or DATE_ADD() function: SELECT ADDDATE(CURRENT_DATE(), INTERVAL 3 MONTH);
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q5. How would you extract the time component (hours, minutes, seconds) from a datetime value?
+ans) To extract the time component from a datetime value, you can use the TIME() function: SELECT TIME('2023-05-01 12:34:56'); This will output "12:34:56".
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+NUMERIC FUNCTIONS:
+
+Q1.  What is the difference between AVG() and COUNT() functions? When would you use each of them?
+ans) AVG() calculates the average value of a set of values, while COUNT() returns the number of rows/values. AVG() is used to find the mean, and COUNT() is used to count the number of rows or non-null values.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q2. AVG() calculates the average value of a set of values, while COUNT() returns the number of rows/values. AVG() is used to find the mean, and COUNT() is used to count the number of rows or non-null values.
+ans) To calculate the square root of 144, you can use the SQRT() function: SELECT SQRT(144); This will output 12.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q3. How would you round the number 3.14159 to two decimal places?
+ans) to round the number 3.14159 to two decimal places , you can use the ROUND() function: SELECT ROUND(3.14159,2);
+This will output 3.14.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q4. Explain the purpose of the MIN() and MAX() functions. Give an example of how to use them with the GROUP BY clause.
+ans) The MIN() function returns the minimum value, and the MAX() function returns the maximum value in a group of values. Example with GROUP BY: SELECT MIN(price) AS min_price, MAX(price) AS max_price, category FROM products GROUP BY category;
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q5. Write a SQL query to calculate the power of 2 raised to the 5th power.
+ans) To calculate the power of 2 raised to the 5th power, you can use the POW() function: SELECT POW(2, 5);

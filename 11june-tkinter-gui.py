@@ -18,7 +18,7 @@ from tkinter import *
 
 root = Tk()
 root.title("Tk Example")
-root.minsize(200, 200)  # width, height
+root.minsize(200, 200) 
 root.geometry("300x300+50+50")
 
 text = Label(root, text="Nothing will work unless you do.")
@@ -32,7 +32,7 @@ from tkinter import *
 
 root = Tk()
 root.title("Tk Example")
-root.minsize(200, 200)  # width, height
+root.minsize(200, 200) 
 root.geometry("300x300+50+50")
 
 e1 = Entry(root)
