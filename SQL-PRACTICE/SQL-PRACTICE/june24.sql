@@ -142,5 +142,4 @@ END//
 CREATE TRIGGER advanced_trigger
 BEFORE UPDATE ON products
 FOR EACH ROW
-BEGIN
-
+BEGIN 
